@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mikita Pilets | Full Stack Developer</title>
+  <meta name="description" content="Portfolio of Mikita Pilets, a full stack developer building web applications with JavaScript, React, Node.js and databases.">
+  <meta name="theme-color" content="#0b0f1a">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Apply the saved theme before first paint to avoid a flash -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var light = window.matchMedia("(prefers-color-scheme: light)").matches;
+        document.documentElement.setAttribute("data-theme", saved || (light ? "light" : "dark"));
+      } catch (e) {}
+    })();
+  </script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html" aria-label="Home">mikita<span>.dev</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav__list" id="nav-list">
+          <li><a class="nav__link" href="index.html" aria-current="page">Home</a></li>
+          <li><a class="nav__link" href="about.html">About</a></li>
+          <li><a class="nav__link" href="projects.html">Projects</a></li>
+          <li><a class="nav__link" href="contact.html">Contact</a></li>
+        </ul>
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch theme">&#9728;</button>
+        <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle menu">&#9776;</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__grid">
+        <div>
+          <span class="eyebrow">&lt;hello world /&gt;</span>
+          <h1>Hi, I'm <span class="accent">Mikita Pilets</span>.<br>I build web applications.</h1>
+          <p class="hero__lead">
+            Full stack developer focused on clean architecture, solid APIs and
+            interfaces that feel good to use. I enjoy turning ideas into
+            working products, one iteration at a time.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="projects.html">View my work</a>
+            <a class="btn btn--ghost" href="contact.html">Get in touch</a>
+          </div>
+        </div>
+
+        <aside class="hero__card" aria-hidden="true">
+          <div class="dots"><i></i><i></i><i></i></div>
+<pre><span class="k">const</span> developer = {
+  name: <span class="s">"Mikita Pilets"</span>,
+  role: <span class="s">"Full Stack Developer"</span>,
+  stack: [<span class="s">"JavaScript"</span>, <span class="s">"React"</span>,
+          <span class="s">"Node.js"</span>, <span class="s">"MongoDB"</span>],
+  languages: [<span class="s">"Russian"</span>, <span class="s">"English"</span>],
+  openToWork: <span class="k">true</span>
+};</pre>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">// what I do</span>
+          <h2>Where I can help</h2>
+          <p class="muted">From the database to the browser, I cover the whole path of a feature.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">&#127912;</div>
+            <h3>Frontend</h3>
+            <p class="muted">Responsive, accessible interfaces built with semantic HTML, modern CSS and JavaScript or React.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">&#9881;</div>
+            <h3>Backend</h3>
+            <p class="muted">REST APIs with Node.js and Express, authentication, validation and clear error handling.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">&#128451;</div>
+            <h3>Databases</h3>
+            <p class="muted">Schema design and queries for MongoDB and MySQL, with an eye on performance and consistency.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">// featured</span>
+          <h2>Selected projects</h2>
+          <p class="muted">A quick look at what I have been working on. More details on the projects page.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card project reveal">
+            <div class="project__thumb" aria-hidden="true">&#127925;</div>
+            <div class="project__body">
+              <h3>Music Platform</h3>
+              <p class="muted">Streaming platform concept for independent artists. Placeholder text, replace with your own description.</p>
+              <ul class="tags"><li class="tag">Node.js</li><li class="tag">React</li></ul>
+            </div>
+          </article>
+          <article class="card project reveal">
+            <div class="project__thumb" aria-hidden="true">&#128203;</div>
+            <div class="project__body">
+              <h3>Task Manager</h3>
+              <p class="muted">Kanban-style task board with drag and drop. Placeholder text, replace with your own description.</p>
+              <ul class="tags"><li class="tag">JavaScript</li><li class="tag">CSS</li></ul>
+            </div>
+          </article>
+          <article class="card project reveal">
+            <div class="project__thumb" aria-hidden="true">&#128202;</div>
+            <div class="project__body">
+              <h3>Analytics Dashboard</h3>
+              <p class="muted">Charts and reports from a REST API. Placeholder text, replace with your own description.</p>
+              <ul class="tags"><li class="tag">Express</li><li class="tag">MongoDB</li></ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="btn-row">
+          <a class="btn btn--ghost" href="projects.html">See all projects &rarr;</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>&copy; <span id="year">2026</span> Mikita Pilets. All rights reserved.</p>
+      <ul class="social">
+        <li><a href="https://github.com/mykytapilec" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/YOUR_LINKEDIN/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

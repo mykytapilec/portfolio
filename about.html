@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | Mikita Pilets</title>
+  <meta name="description" content="About Mikita Pilets: background, skills and experience as a full stack developer.">
+  <meta name="theme-color" content="#0b0f1a">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var light = window.matchMedia("(prefers-color-scheme: light)").matches;
+        document.documentElement.setAttribute("data-theme", saved || (light ? "light" : "dark"));
+      } catch (e) {}
+    })();
+  </script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html" aria-label="Home">mikita<span>.dev</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav__list" id="nav-list">
+          <li><a class="nav__link" href="index.html">Home</a></li>
+          <li><a class="nav__link" href="about.html" aria-current="page">About</a></li>
+          <li><a class="nav__link" href="projects.html">Projects</a></li>
+          <li><a class="nav__link" href="contact.html">Contact</a></li>
+        </ul>
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch theme">&#9728;</button>
+        <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle menu">&#9776;</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container about__grid">
+        <div class="avatar reveal" role="img" aria-label="Initials MP">MP</div>
+
+        <div class="reveal">
+          <span class="eyebrow">// about me</span>
+          <h1>A developer who likes to build things end to end.</h1>
+          <p class="muted">
+            I'm Mikita, a full stack developer. I work on personal and side
+            projects where I design the architecture, write the backend and
+            ship the interface myself. I prefer to build iteratively and keep
+            good documentation, so a project stays easy to pick up again.
+          </p>
+          <p class="muted">
+            I'm comfortable working in both Russian and English, and I enjoy
+            technical discussions about system design, APIs and data models.
+            Right now I'm sharpening my skills through a full stack internship
+            with practical projects.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="contact.html">Let's talk</a>
+            <a class="btn btn--ghost" href="assets/resume.pdf" download>Download CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container grid grid--2">
+        <div class="reveal">
+          <h2>Skills</h2>
+          <p class="muted">Bars show my own estimate of confidence, not a formal rating.</p>
+
+          <div class="skill">
+            <div class="skill__row"><span>HTML &amp; CSS</span><span>90%</span></div>
+            <div class="skill__bar"><div class="skill__fill" data-level="90"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill__row"><span>JavaScript</span><span>85%</span></div>
+            <div class="skill__bar"><div class="skill__fill" data-level="85"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill__row"><span>React</span><span>75%</span></div>
+            <div class="skill__bar"><div class="skill__fill" data-level="75"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill__row"><span>Node.js &amp; Express</span><span>80%</span></div>
+            <div class="skill__bar"><div class="skill__fill" data-level="80"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill__row"><span>MongoDB / MySQL</span><span>70%</span></div>
+            <div class="skill__bar"><div class="skill__fill" data-level="70"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill__row"><span>Git &amp; GitHub</span><span>85%</span></div>
+            <div class="skill__bar"><div class="skill__fill" data-level="85"></div></div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <h2>Journey</h2>
+          <ul class="timeline">
+            <li>
+              <time datetime="2026-10">Oct 2026 - now</time>
+              <h3>Full Stack Development Intern</h3>
+              <p class="muted">Auspify Technologies. Building practical full stack projects as part of a 4-week program.</p>
+            </li>
+            <li>
+              <time datetime="2026">2026</time>
+              <h3>Independent projects</h3>
+              <p class="muted">Designing and building side projects across backend, web and mobile.</p>
+            </li>
+            <li>
+              <time datetime="2025">Earlier</time>
+              <h3>Learning the fundamentals</h3>
+              <p class="muted">HTML, CSS, JavaScript, databases and version control. Placeholder, edit with your own milestones.</p>
+            </li>
+          </ul>
+
+          <h2>Tools I use</h2>
+          <ul class="tags">
+            <li class="tag">VS Code</li>
+            <li class="tag">Git</li>
+            <li class="tag">Postman</li>
+            <li class="tag">npm</li>
+            <li class="tag">Figma</li>
+            <li class="tag">Linux</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>&copy; <span id="year">2026</span> Mikita Pilets. All rights reserved.</p>
+      <ul class="social">
+        <li><a href="https://github.com/mykytapilec" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/YOUR_LINKEDIN/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
