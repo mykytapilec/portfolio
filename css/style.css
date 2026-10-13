@@ -460,7 +460,8 @@ p { margin: 0 0 1em; }
 
 .project__links {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
   margin-top: auto;
   padding-top: 1.1rem;
   font-weight: 600;
@@ -518,6 +519,22 @@ p { margin: 0 0 1em; }
   box-shadow: var(--shadow);
 }
 
+.avatar-photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: 50% 22%;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+
+.timeline + h2 {
+  margin-top: 2rem;
+}
+
 .timeline {
   list-style: none;
   margin: 0;
@@ -542,10 +559,21 @@ p { margin: 0 0 1em; }
   border: 2px solid var(--bg);
 }
 
-.timeline time {
+.timeline time,
+.timeline__label {
   font-family: var(--font-mono);
   font-size: 0.82rem;
   color: var(--accent);
+}
+
+/* ---------- Skill groups ---------- */
+.skill-group {
+  margin-bottom: 1.4rem;
+}
+
+.skill-group h3 {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
 }
 
 /* ---------- Contact form ---------- */
@@ -691,6 +719,7 @@ p { margin: 0 0 1em; }
   .about__grid,
   .contact__grid { grid-template-columns: 1fr; }
   .avatar { max-width: 200px; font-size: 4rem; }
+  .avatar-photo { max-width: 260px; }
 }
 
 @media (max-width: 720px) {
