@@ -451,6 +451,10 @@ p { margin: 0 0 1em; }
   border-bottom: 1px solid var(--border);
 }
 
+.grid--2 .project__thumb {
+  aspect-ratio: 21 / 7;
+}
+
 .project__body {
   padding: 1.4rem;
   display: flex;
@@ -466,6 +470,82 @@ p { margin: 0 0 1em; }
   padding-top: 1.1rem;
   font-weight: 600;
   font-size: 0.92rem;
+}
+
+/* Whole card is clickable: the title link is stretched over the card.
+   Interactive children (the demo button) sit above it with a higher z-index. */
+.project {
+  position: relative;
+  cursor: pointer;
+}
+
+.project__title-link {
+  color: inherit;
+}
+
+.project__title-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: var(--radius);
+}
+
+.project__title-link:hover {
+  color: var(--accent-strong);
+}
+
+.project__title-link:focus-visible {
+  outline: none;
+}
+
+.project__title-link:focus-visible::after {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.project__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  margin-top: auto;
+  padding-top: 1.1rem;
+}
+
+.project__cta {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--accent);
+  transition: transform 0.15s ease;
+}
+
+.project:hover .project__cta {
+  transform: translateX(3px);
+}
+
+.project__demo {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.btn--sm {
+  padding: 0.45rem 1.1rem;
+  font-size: 0.88rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .project.is-hidden {
