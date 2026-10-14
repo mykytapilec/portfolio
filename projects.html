@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Mikita Pilets</title>
+  <meta name="description" content="Projects by Mikita Pilets: Hvalya music streaming platform, Task Tracker with its REST API, and Weather Web App. Each card opens the GitHub repository.">
+  <meta name="theme-color" content="#0b0f1a">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var light = window.matchMedia("(prefers-color-scheme: light)").matches;
+        document.documentElement.setAttribute("data-theme", saved || (light ? "light" : "dark"));
+      } catch (e) {}
+    })();
+  </script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html" aria-label="Home">mikita<span>.dev</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav__list" id="nav-list">
+          <li><a class="nav__link" href="index.html">Home</a></li>
+          <li><a class="nav__link" href="about.html">About</a></li>
+          <li><a class="nav__link" href="projects.html" aria-current="page">Projects</a></li>
+          <li><a class="nav__link" href="contact.html">Contact</a></li>
+        </ul>
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch theme">&#9728;</button>
+        <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle menu">&#9776;</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">// portfolio</span>
+          <h1>Projects</h1>
+          <p class="muted">
+            Click a card to open the project's GitHub repository. Where a live
+            version exists, there is also a Live demo button.
+          </p>
+        </div>
+
+        <div class="grid grid--2" id="project-grid">
+
+          <!-- Hvalya -->
+          <article class="card project">
+            <div class="project__thumb" aria-hidden="true">&#127925;</div>
+            <div class="project__body">
+              <h3>
+                <a class="project__title-link" href="https://github.com/mykytapilec/hvalya" target="_blank" rel="noopener noreferrer">Hvalya<span class="sr-only"> (GitHub repository)</span></a>
+              </h3>
+              <p class="muted">
+                Music streaming platform for independent artists with an 80/20
+                revenue split in the artist's favor. A solo capstone project,
+                designed, built and deployed end to end: a NestJS API with Prisma
+                and PostgreSQL, a Next.js web app, an Expo mobile app and a FastAPI
+                recommendation service. Runs on AWS with Docker Compose and
+                GitHub Actions CI/CD.
+              </p>
+              <ul class="tags">
+                <li class="tag">NestJS</li>
+                <li class="tag">Next.js</li>
+                <li class="tag">React Native</li>
+                <li class="tag">FastAPI</li>
+                <li class="tag">PostgreSQL</li>
+                <li class="tag">AWS</li>
+              </ul>
+              <div class="project__footer">
+                <span class="project__cta" aria-hidden="true">View on GitHub &#8599;</span>
+                <a class="btn btn--ghost btn--sm project__demo" href="http://hvalya-music.duckdns.org:3002" target="_blank" rel="noopener noreferrer">Live demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Task Tracker (frontend) -->
+          <article class="card project">
+            <div class="project__thumb" aria-hidden="true">&#128203;</div>
+            <div class="project__body">
+              <h3>
+                <a class="project__title-link" href="https://github.com/mykytapilec/task-tracker" target="_blank" rel="noopener noreferrer">Task Tracker<span class="sr-only"> (GitHub repository)</span></a>
+              </h3>
+              <p class="muted">
+                Task management app built with React and TypeScript. Users
+                register and log in with JWT authentication, create boards,
+                organize tasks in columns with drag and drop, and open a task
+                details view. Responsive interface, deployed on AWS behind Nginx
+                with HTTPS. Built as part of the roadmap.sh Task Tracker project.
+              </p>
+              <ul class="tags">
+                <li class="tag">React</li>
+                <li class="tag">TypeScript</li>
+                <li class="tag">Vite</li>
+                <li class="tag">Tailwind CSS</li>
+                <li class="tag">Zustand</li>
+                <li class="tag">dnd-kit</li>
+              </ul>
+              <div class="project__footer">
+                <span class="project__cta" aria-hidden="true">View on GitHub &#8599;</span>
+                <a class="btn btn--ghost btn--sm project__demo" href="https://task-tracker-hvalya.duckdns.org" target="_blank" rel="noopener noreferrer">Live demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Task Tracker API (backend) -->
+          <article class="card project">
+            <div class="project__thumb" aria-hidden="true">&#128273;</div>
+            <div class="project__body">
+              <h3>
+                <a class="project__title-link" href="https://github.com/mykytapilec/task-tracker-api" target="_blank" rel="noopener noreferrer">Task Tracker API<span class="sr-only"> (GitHub repository)</span></a>
+              </h3>
+              <p class="muted">
+                Backend REST API for the Task Tracker app. Registration and login
+                with password hashing and JWT, user-specific boards and columns,
+                and full task CRUD with descriptions, story points and subtasks.
+                Request validation with Zod, Docker setup and tests with Vitest.
+              </p>
+              <ul class="tags">
+                <li class="tag">Node.js</li>
+                <li class="tag">TypeScript</li>
+                <li class="tag">Express</li>
+                <li class="tag">Prisma</li>
+                <li class="tag">PostgreSQL</li>
+                <li class="tag">Zod</li>
+              </ul>
+              <div class="project__footer">
+                <span class="project__cta" aria-hidden="true">View on GitHub &#8599;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Weather Web App -->
+          <article class="card project">
+            <div class="project__thumb" aria-hidden="true">&#127780;</div>
+            <div class="project__body">
+              <h3>
+                <a class="project__title-link" href="https://github.com/mykytapilec/weather-web-app" target="_blank" rel="noopener noreferrer">Weather Web App<span class="sr-only"> (GitHub repository)</span></a>
+              </h3>
+              <p class="muted">
+                Weather app built with React, TypeScript and Vite. Search a city to
+                see current conditions, temperature and feels-like, humidity, wind
+                and a multi-day forecast, with loading and error states. The last
+                searched city is restored after a reload. Data comes from the
+                Visual Crossing API. Built as part of the roadmap.sh frontend
+                projects.
+              </p>
+              <ul class="tags">
+                <li class="tag">React</li>
+                <li class="tag">TypeScript</li>
+                <li class="tag">Vite</li>
+                <li class="tag">Visual Crossing API</li>
+              </ul>
+              <div class="project__footer">
+                <span class="project__cta" aria-hidden="true">View on GitHub &#8599;</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>&copy; <span id="year">2026</span> Mikita Pilets. All rights reserved.</p>
+      <ul class="social">
+        <li><a href="https://github.com/mykytapilec" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/mikitapilets/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

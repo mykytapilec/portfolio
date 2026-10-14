@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | Mikita Pilets</title>
+  <meta name="description" content="About Mikita Pilets: full-stack JS/TS developer with 6+ years of experience, skills and career path.">
+  <meta name="theme-color" content="#0b0f1a">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var light = window.matchMedia("(prefers-color-scheme: light)").matches;
+        document.documentElement.setAttribute("data-theme", saved || (light ? "light" : "dark"));
+      } catch (e) {}
+    })();
+  </script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html" aria-label="Home">mikita<span>.dev</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav__list" id="nav-list">
+          <li><a class="nav__link" href="index.html">Home</a></li>
+          <li><a class="nav__link" href="about.html" aria-current="page">About</a></li>
+          <li><a class="nav__link" href="projects.html">Projects</a></li>
+          <li><a class="nav__link" href="contact.html">Contact</a></li>
+        </ul>
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch theme">&#9728;</button>
+        <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle menu">&#9776;</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container about__grid">
+        <img class="avatar-photo reveal" src="assets/images/mikita.jpg" alt="Portrait of Mikita Pilets" width="640" height="960">
+
+        <div class="reveal">
+          <span class="eyebrow">// about me</span>
+          <h1>A developer who likes to build things end to end.</h1>
+          <p class="muted">
+            I'm Mikita, a full-stack JS/TS developer with more than six years of
+            experience. I have worked on product teams and with clients directly,
+            building React and Next.js applications, Node.js and NestJS backends,
+            and the infrastructure around them.
+          </p>
+          <p class="muted">
+            My capstone project for the master's program, Hvalya, is a music
+            streaming platform for independent artists. I designed, built and
+            deployed it on my own: the backend, the web and mobile apps, and an AI
+            recommendation service.
+          </p>
+          <p class="muted">
+            I prefer to build iteratively and keep clear documentation, so a
+            project stays easy to pick up again. I work comfortably in English and
+            Russian. Right now I'm also a Full Stack Development Intern at
+            Auspify Technologies.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="contact.html">Let's talk</a>
+            <a class="btn btn--ghost" href="assets/Mikita_Pilets_CV.pdf" download>Download CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container grid grid--2">
+        <div class="reveal">
+          <h2>Skills</h2>
+          <p class="muted">Technologies I have used in production work and in my projects.</p>
+
+          <div class="skill-group">
+            <h3>Frontend</h3>
+            <ul class="tags">
+              <li class="tag">HTML</li><li class="tag">CSS / SCSS</li><li class="tag">JavaScript</li>
+              <li class="tag">TypeScript</li><li class="tag">React</li><li class="tag">Next.js</li>
+              <li class="tag">Redux</li><li class="tag">Zustand</li><li class="tag">React Query</li>
+              <li class="tag">Apollo Client</li><li class="tag">Material UI</li><li class="tag">Mantine</li>
+              <li class="tag">Tailwind CSS</li><li class="tag">Vite</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3>Backend</h3>
+            <ul class="tags">
+              <li class="tag">Node.js</li><li class="tag">Express</li><li class="tag">NestJS</li>
+              <li class="tag">REST APIs</li><li class="tag">JWT auth</li><li class="tag">Prisma</li>
+              <li class="tag">Python</li><li class="tag">FastAPI</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3>Mobile</h3>
+            <ul class="tags">
+              <li class="tag">React Native</li><li class="tag">Expo</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3>Data &amp; cloud</h3>
+            <ul class="tags">
+              <li class="tag">PostgreSQL</li><li class="tag">MongoDB</li><li class="tag">AWS</li>
+              <li class="tag">Azure</li><li class="tag">Docker</li><li class="tag">Nginx</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3>Workflow &amp; testing</h3>
+            <ul class="tags">
+              <li class="tag">Git</li><li class="tag">GitHub Actions</li><li class="tag">Azure DevOps</li>
+              <li class="tag">Jest</li><li class="tag">Testing Library</li><li class="tag">Vitest</li>
+              <li class="tag">Jira</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <h2>Experience</h2>
+          <ul class="timeline">
+            <li>
+              <time datetime="2026-10">Oct 2026 - now</time>
+              <h3>Full Stack Development Intern</h3>
+              <p class="muted">Auspify Technologies. Practical full stack projects in a 4-week remote program.</p>
+            </li>
+            <li>
+              <time datetime="2025-06">Jun 2025 - now</time>
+              <h3>Freelance Full-stack Developer</h3>
+              <p class="muted">Delivering web solutions with TypeScript, React, Next.js and Node.js, working directly with clients from requirements to post-release support.</p>
+            </li>
+            <li>
+              <time datetime="2023-04">Apr 2023 - Jun 2025</time>
+              <h3>Full-stack Developer, Cloudguard AI</h3>
+              <p class="muted">Designed a scalable React and Next.js frontend architecture, implemented server-side rendering and built server-side logic with Node.js.</p>
+            </li>
+            <li>
+              <time datetime="2021-04">Apr 2021 - Apr 2023</time>
+              <h3>Full-stack Developer, Vention</h3>
+              <p class="muted">Built a reusable UI component library and led frontend development with React and Apollo Client.</p>
+            </li>
+            <li>
+              <time datetime="2019-08">Aug 2019 - Mar 2021</time>
+              <h3>Front-end Developer, Andersen Lab</h3>
+              <p class="muted">Developed reusable React components and turned Figma designs into pixel-perfect interfaces.</p>
+            </li>
+          </ul>
+
+          <h2>Education</h2>
+          <ul class="timeline">
+            <li>
+              <time datetime="2026">In progress, 2026</time>
+              <h3>MSc in Software Engineering</h3>
+              <p class="muted">Quantic School of Business and Technology. Capstone project: Hvalya.</p>
+            </li>
+            <li>
+              <time datetime="2016">2016</time>
+              <h3>Bachelor's degree, Medical and Pharmaceutical Chemistry</h3>
+              <p class="muted">Belarusian State University.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>&copy; <span id="year">2026</span> Mikita Pilets. All rights reserved.</p>
+      <ul class="social">
+        <li><a href="https://github.com/mykytapilec" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/mikitapilets/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mikita Pilets | Full Stack Developer</title>
+  <meta name="description" content="Portfolio of Mikita Pilets, a full-stack JS/TS developer with 6+ years of experience building web and mobile applications with React, Node.js and PostgreSQL.">
+  <meta name="theme-color" content="#0b0f1a">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Apply the saved theme before first paint to avoid a flash -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var light = window.matchMedia("(prefers-color-scheme: light)").matches;
+        document.documentElement.setAttribute("data-theme", saved || (light ? "light" : "dark"));
+      } catch (e) {}
+    })();
+  </script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html" aria-label="Home">mikita<span>.dev</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav__list" id="nav-list">
+          <li><a class="nav__link" href="index.html" aria-current="page">Home</a></li>
+          <li><a class="nav__link" href="about.html">About</a></li>
+          <li><a class="nav__link" href="projects.html">Projects</a></li>
+          <li><a class="nav__link" href="contact.html">Contact</a></li>
+        </ul>
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch theme">&#9728;</button>
+        <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle menu">&#9776;</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__grid">
+        <div>
+          <span class="eyebrow">&lt;hello world /&gt;</span>
+          <h1>Hi, I'm <span class="accent">Mikita Pilets</span>.<br>I build web and mobile apps.</h1>
+          <p class="hero__lead">
+            Full-stack JS/TS developer with 6+ years of experience. I design,
+            build and deploy applications end to end, from the database and API
+            to the web and mobile interfaces. My latest project is Hvalya, a
+            music streaming platform for independent artists.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="projects.html">View my work</a>
+            <a class="btn btn--ghost" href="contact.html">Get in touch</a>
+          </div>
+        </div>
+
+        <aside class="hero__card" aria-hidden="true">
+          <div class="dots"><i></i><i></i><i></i></div>
+<pre><span class="k">const</span> developer = {
+  name: <span class="s">"Mikita Pilets"</span>,
+  role: <span class="s">"Full Stack Developer"</span>,
+  experience: <span class="s">"6+ years"</span>,
+  stack: [<span class="s">"TypeScript"</span>, <span class="s">"React"</span>,
+          <span class="s">"Node.js"</span>, <span class="s">"PostgreSQL"</span>],
+  languages: [<span class="s">"English"</span>, <span class="s">"Russian"</span>],
+  now: <span class="s">"Full Stack Intern @ Auspify"</span>
+};</pre>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">// what I do</span>
+          <h2>Where I can help</h2>
+          <p class="muted">From the database to the browser, I cover the whole path of a feature.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">&#127912;</div>
+            <h3>Frontend</h3>
+            <p class="muted">Responsive interfaces with React, Next.js and TypeScript, plus React Native for mobile.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">&#9881;</div>
+            <h3>Backend</h3>
+            <p class="muted">REST APIs with NestJS and Express, JWT authentication, role-based access and request validation.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">&#9729;</div>
+            <h3>Data &amp; deployment</h3>
+            <p class="muted">PostgreSQL with Prisma, Docker, and deployment on AWS with CI/CD through GitHub Actions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">// featured</span>
+          <h2>Selected projects</h2>
+          <p class="muted">A quick look at what I have built. Links and details are on the projects page.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card project reveal">
+            <div class="project__thumb" aria-hidden="true">&#127925;</div>
+            <div class="project__body">
+              <h3>
+                <a class="project__title-link" href="https://github.com/mykytapilec/hvalya" target="_blank" rel="noopener noreferrer">Hvalya<span class="sr-only"> (GitHub repository)</span></a>
+              </h3>
+              <p class="muted">Music streaming platform for independent artists with an 80/20 revenue split in the artist's favor. A solo capstone project.</p>
+              <ul class="tags"><li class="tag">NestJS</li><li class="tag">Next.js</li><li class="tag">React Native</li><li class="tag">AWS</li></ul>
+              <div class="project__footer">
+                <span class="project__cta" aria-hidden="true">View on GitHub &#8599;</span>
+              </div>
+            </div>
+          </article>
+          <article class="card project reveal">
+            <div class="project__thumb" aria-hidden="true">&#128203;</div>
+            <div class="project__body">
+              <h3>
+                <a class="project__title-link" href="https://github.com/mykytapilec/task-tracker" target="_blank" rel="noopener noreferrer">Task Tracker<span class="sr-only"> (GitHub repository)</span></a>
+              </h3>
+              <p class="muted">Task management app with JWT authentication, boards, columns and drag and drop.</p>
+              <ul class="tags"><li class="tag">React</li><li class="tag">TypeScript</li><li class="tag">Zustand</li></ul>
+              <div class="project__footer">
+                <span class="project__cta" aria-hidden="true">View on GitHub &#8599;</span>
+              </div>
+            </div>
+          </article>
+          <article class="card project reveal">
+            <div class="project__thumb" aria-hidden="true">&#127780;</div>
+            <div class="project__body">
+              <h3>
+                <a class="project__title-link" href="https://github.com/mykytapilec/weather-web-app" target="_blank" rel="noopener noreferrer">Weather Web App<span class="sr-only"> (GitHub repository)</span></a>
+              </h3>
+              <p class="muted">Search a city and see current weather and a multi-day forecast.</p>
+              <ul class="tags"><li class="tag">React</li><li class="tag">TypeScript</li><li class="tag">Vite</li></ul>
+              <div class="project__footer">
+                <span class="project__cta" aria-hidden="true">View on GitHub &#8599;</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="btn-row">
+          <a class="btn btn--ghost" href="projects.html">See all projects &rarr;</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>&copy; <span id="year">2026</span> Mikita Pilets. All rights reserved.</p>
+      <ul class="social">
+        <li><a href="https://github.com/mykytapilec" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/mikitapilets/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
