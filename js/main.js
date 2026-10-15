@@ -2,8 +2,7 @@
    Portfolio scripts
    - Theme toggle (persisted)
    - Mobile navigation
-   - Scroll reveal + skill bars
-   - Project filters
+   - Scroll reveal
    - Contact form validation and submission
    ========================================================================== */
 
@@ -88,18 +87,12 @@
     });
   }
 
-  /* ---------- Scroll reveal and skill bars ---------- */
+  /* ---------- Scroll reveal ---------- */
   function initReveal() {
     const items = $$(".reveal");
-    const bars = $$(".skill__fill");
-
-    const fillBar = (bar) => {
-      bar.style.width = bar.dataset.level + "%";
-    };
 
     if (!("IntersectionObserver" in window)) {
       items.forEach((el) => el.classList.add("is-visible"));
-      bars.forEach(fillBar);
       return;
     }
 
@@ -108,7 +101,6 @@
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
           entry.target.classList.add("is-visible");
-          $$(".skill__fill", entry.target).forEach(fillBar);
           observer.unobserve(entry.target);
         });
       },
@@ -116,36 +108,6 @@
     );
 
     items.forEach((el) => observer.observe(el));
-
-    // Skill bars that are not inside a .reveal block
-    bars
-      .filter((bar) => !bar.closest(".reveal"))
-      .forEach(fillBar);
-  }
-
-  /* ---------- Project filters ---------- */
-  function initFilters() {
-    const buttons = $$(".filter-btn");
-    const projects = $$(".project");
-    if (!buttons.length) return;
-
-    buttons.forEach((button) => {
-      button.addEventListener("click", () => {
-        const filter = button.dataset.filter;
-
-        buttons.forEach((b) => {
-          const active = b === button;
-          b.classList.toggle("is-active", active);
-          b.setAttribute("aria-pressed", String(active));
-        });
-
-        projects.forEach((project) => {
-          const categories = (project.dataset.category || "").split(" ");
-          const show = filter === "all" || categories.includes(filter);
-          project.classList.toggle("is-hidden", !show);
-        });
-      });
-    });
   }
 
   /* ---------- Contact form ---------- */
@@ -214,15 +176,6 @@
         return;
       }
 
-      // The form action must be replaced with a real Formspree endpoint
-      if (form.action.includes("YOUR_FORM_ID")) {
-        showStatus(
-          "error",
-          "The form is not connected yet. Replace YOUR_FORM_ID in contact.html with your Formspree form ID."
-        );
-        return;
-      }
-
       submitBtn.disabled = true;
       submitBtn.textContent = "Sending...";
 
@@ -259,7 +212,6 @@
     initTheme();
     initNav();
     initReveal();
-    initFilters();
     initContactForm();
     initYear();
   });
