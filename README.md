@@ -9,10 +9,10 @@ Created as Task 1 of the Auspify Technologies Full Stack Development internship.
 
 | Page | File | Content |
 | --- | --- | --- |
-| Home | `index.html` | Introduction, areas of expertise, featured projects |
-| About | `about.html` | Bio, skills, work experience, education, CV download |
-| Projects | `projects.html` | Project cards: click opens the GitHub repository, optional Live demo button |
-| Contact | `contact.html` | Contact details and a working contact form |
+| Home | `index.html` | Introduction, areas of expertise, featured projects (`/portfolio/`) |
+| About | `about/index.html` | Bio, skills, work experience, education, CV download (`/portfolio/about/`) |
+| Projects | `projects/index.html` | Project cards: click opens the GitHub repository, optional Live demo button (`/portfolio/projects/`) |
+| Contact | `contact/index.html` | Contact details and a working contact form (`/portfolio/contact/`) |
 
 ## Features
 
@@ -32,9 +32,15 @@ HTML5, CSS3 (custom properties, grid, flexbox), vanilla JavaScript (ES6+), Forms
 ```
 portfolio/
 ├── index.html
-├── about.html
-├── projects.html
-├── contact.html
+├── about/
+│   └── index.html
+├── projects/
+│   └── index.html
+├── contact/
+│   └── index.html
+├── about.html          # Redirects to /about/
+├── projects.html       # Redirects to /projects/
+├── contact.html        # Redirects to /contact/
 ├── css/
 │   └── style.css        # design tokens, layout, components, responsive rules
 ├── js/
@@ -56,7 +62,7 @@ npx serve .
 
 ## Contact form
 
-The form posts to a Formspree endpoint set in the `action` attribute of the form in `contact.html`.
+The form posts to a Formspree endpoint set in the `action` attribute of the form in `contact/index.html`.
 To use your own form, create one at https://formspree.io and replace the ID at the end of the URL:
 
 ```html
@@ -65,7 +71,7 @@ To use your own form, create one at https://formspree.io and replace the ID at t
 
 ## Editing content
 
-**Add a project.** Copy an existing card in `projects.html` and change the repository link, title, description and tags.
+**Add a project.** Copy an existing card in `projects/index.html` and change the repository link, title, description and tags.
 Remove the `Live demo` link if the project has no live version:
 
 ```html
